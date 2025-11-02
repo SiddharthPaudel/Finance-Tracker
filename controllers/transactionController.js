@@ -2,7 +2,7 @@ import Transaction from "../models/Transaction.js";
 
 export const addTransaction=async(req,res)=>{
     const{userId,type,amount,categoryId,note,date}=req.body;
-    if(!userId || !type || !amount || !categoryIdId){
+    if(!userId || !type || !amount || !categoryId){
         return res.status(400).json({message:"Please fill all required fields"});
     }
     try {
@@ -29,7 +29,7 @@ export const addTransaction=async(req,res)=>{
 export const getTransactions=async(req,res)=>{
     const{userId}=req.params;
     try{
-        const transactions=await Transaction.find({userId}).populate("category","name color icon").sort({date:-1});
+        const transactions=await Transaction.find({userId}).populate("category","name color icon budgetLimit").sort({date:-1});
         res.status(200).json({message:"Transactions fetched sucessfully",transactions})
     }
     catch(error){
