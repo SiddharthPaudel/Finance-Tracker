@@ -2,9 +2,14 @@ import Transaction from "../models/Transaction.js";
 
 export const addTransaction=async(req,res)=>{
     const{userId,type,amount,categoryId,note,date}=req.body;
-    if(!userId || !type || !amount || !categoryId){
+    if(!userId || !type || !amount ){
         return res.status(400).json({message:"Please fill all required fields"});
     }
+    else if(amount<=0){
+        return res.status(400).json({message:"Amount should be greater than zero"})
+
+    }
+    
     try {
         const transaction=new Transaction({
 
