@@ -1,17 +1,24 @@
-import { useState } from 'react'
-
+import React from 'react'
+import { BrowserRouter as Router , Routes,Route } from 'react-router-dom'
 import './App.css'
 import Header from "./components/Header.jsx"
+import Hero from './components/HeroSection.jsx'
+import OfferSection from './components/OfferSection.jsx'
+import HomePage from './HomePage/HomePage.jsx'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <>
-    <Header/>
+    <Router>
+      <Routes>
+        <Route index element={<HomePage/>} />
+      </Routes>
+    </Router>
     
-    </>
+    
+    
   )
 }
 
