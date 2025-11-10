@@ -1,14 +1,28 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { EyeIcon, EyeOffIcon } from "lucide-react"; // npm install lucide-react
+import { Link, useNavigate } from "react-router-dom";
+import { EyeIcon, EyeOffIcon,X } from "lucide-react"; // npm install lucide-react
 
 const Signup = () => {
+  const navigate=useNavigate();
+  const handleBack=()=>{
+    navigate("login")
+  }
+  const handleClose=()=>{
+    navigate("/")
+  }
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-50">
-      <div className="bg-white shadow-lg rounded-2xl px-10 py-12 w-full max-w-md">
+      <div className="bg-white shadow-lg rounded-2xl px-10 py-12 w-full max-w-md relative">
+        <button
+        onClick={handleClose}
+        className=" absolute top-6 right-6 text-gray-500 hover:text-gray-700"
+        >
+          <X/>
+
+        </button>
         <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
           ✨ Create Account
         </h2>

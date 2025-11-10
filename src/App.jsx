@@ -1,11 +1,11 @@
 import React from 'react'
-import { BrowserRouter as Router , Routes,Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes,Route } from 'react-router-dom'
 import './App.css'
-import Header from "./components/Header.jsx"
-import Hero from './components/HeroSection.jsx'
 import OfferSection from './components/OfferSection.jsx'
 import HomePage from './HomePage/HomePage.jsx'
 import Login from './Login/Login.jsx'
+import Layout from './Layout/Layout.jsx'
+import Signup from './Signup/SignUp.jsx'
 
 
 function App() {
@@ -13,9 +13,12 @@ function App() {
 
   return (
     <Router>
-      <Routes>
+      <Routes >
+        <Route path='/' element={<Layout/>} >
         <Route index element={<HomePage/>} />
-        <Route path='/login' element={<Login/>}/>
+        <Route path='login' element={<Login/>}/>
+        <Route path='signUp' element={<Signup/>}/>
+        </Route>
       </Routes>
     </Router>
     

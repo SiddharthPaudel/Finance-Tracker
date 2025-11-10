@@ -6,7 +6,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white text-black shadow-md font-[Poppins]">
+    <header className="bg-white text-black shadow font-[Poppins]">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 relative">
         
         {/* Left: Logo */}

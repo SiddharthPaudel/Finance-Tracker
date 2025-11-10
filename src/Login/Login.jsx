@@ -1,16 +1,28 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { EyeIcon, EyeOffIcon } from "lucide-react"; // npm install lucide-react
+import { Link,useNavigate } from "react-router-dom";
+import { EyeIcon, EyeOffIcon,XIcon } from "lucide-react"; // npm install lucide-react
 
 const Login = () => {
+  const navigate=useNavigate();
+  const handleClose=()=>{
+    navigate("/")
+  }
   const [showPassword, setShowPassword] = useState(false);
+  const[visible,setVisible]=useState(true);
+  if(!visible) return null;
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-50 font-[Poppins]">
-      <div className="bg-white shadow-lg rounded-2xl px-10 py-12 w-full max-w-md">
+      <div className="bg-white shadow-lg rounded-2xl px-10 py-12 w-full max-w-md relative">
+        <button
+          onClick={handleClose}
+className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          >
+            <XIcon/>
+        </button>
         <h2 className="text-3xl font-semibold text-center mb-9 text-gray-800">
           Welcome <span className="text-blue-500">Back</span>
-          <p className="text-sm mt-2">Track you expenses </p>
+          <p className="text-[10px] text-gray-500 mt-2">We missed you! Login to continue your journey with us.</p>
         </h2>
         
         
