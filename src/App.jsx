@@ -6,6 +6,7 @@ import HomePage from './HomePage/HomePage.jsx'
 import Login from './Login/Login.jsx'
 import Layout from './Layout/Layout.jsx'
 import Signup from './Signup/SignUp.jsx'
+import Dashboard from './Dashboard/Dashboard.jsx'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route index element={<HomePage/>} />
         <Route path='login' element={<Login/>}/>
         <Route path='signUp' element={<Signup/>}/>
+        <Route path='dashboard' element={<Dashboard/>}/>
         </Route>
       </Routes>
     </Router>

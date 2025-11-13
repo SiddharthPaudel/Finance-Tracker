@@ -4,6 +4,8 @@ import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+ 
+
 
   return (
     <header className="bg-white text-black shadow font-[Poppins]">
