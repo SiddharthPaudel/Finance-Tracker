@@ -1,5 +1,6 @@
 import React from "react";
 import tracker from "../images/tracker.jpeg"
+import budget from "../images/budget331.png"
 
 const Hero = () => {
   return (

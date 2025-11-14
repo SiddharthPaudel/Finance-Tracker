@@ -12,8 +12,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 relative">
         
         {/* Left: Logo */}
-        <Link to="/" className="text-2xl font-bold whitespace-nowrap">
-          💰 Finance <span className="text-2xl text-blue-500 ">Tracker</span> 
+        <Link to="/" className="text-xl font-semibold whitespace-nowrap">
+          💰 Finance <span className="text-xl text-blue-500 ">Tracker</span> 
         </Link>
 
         {/* Center: Nav Links */}
@@ -33,13 +33,13 @@ const Header = () => {
         <div className="hidden md:flex items-center space-x-4">
           <Link
             to="/login"
-            className="text-blue-500 px-5 py-2 border border-black rounded-full hover:bg-black hover:text-white transition"
+            className="text-blue-500 px-5 py-2 border border-black rounded-ss-2xl hover:bg-black hover:text-white transition "
           >
             Login
           </Link>
           <Link
             to="/signup"
-            className="px-5 py-2 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition"
+            className="px-5 py-2 bg-black text-white rounded-br-2xl  hover:bg-gray-800 transition"
           >
             Sign Up
           </Link>
