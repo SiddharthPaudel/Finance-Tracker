@@ -1,13 +1,15 @@
 import React from "react";
 import tracker from "../images/tracker.jpeg"
 import budget from "../images/budget331.png"
+import Lottie from "lottie-react";
+import finance from "../animation/Data-Dashboard.json"
 
 const Hero = () => {
   return (
     <section className="flex items-center justify-between py-16 px-6 bg-white font-[Poppins]">
       {/* Left side: Text Content */}
       <div className="w-1/2 space-y-6 pl-7">
-        <h1 className=" text-4xl font-extrabold text-gray-900  ">
+        <h1 className=" text-3xl font-semibold text-gray-900  ">
           Smarter Money, Better Future
         </h1>
         <p className="text-lg text-blue-500 ">
@@ -21,10 +23,10 @@ const Hero = () => {
 
       {/* Right side: Image */}
       <div className="w-1/2">
-        <img
-          src={tracker}
-          alt="Financial Illustration"
-          className="w-full h-auto rounded-lg "
+          <Lottie 
+          animationData={finance} 
+          loop={true} 
+          className="w-full h-auto ml-3"
         />
       </div>
     </section>

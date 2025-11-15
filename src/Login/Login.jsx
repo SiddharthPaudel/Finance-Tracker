@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import { EyeIcon, EyeOffIcon,XIcon } from "lucide-react"; // npm install lucide-react
+import { AuthContext } from "../ContextApi/AuthContext";
 
 const Login = () => {
   const navigate=useNavigate();
   const handleClose=()=>{
     navigate("/")
   }
+  const   {setUser}=useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const[visible,setVisible]=useState(true);
   const[email,setEmail]=useState("");
@@ -25,17 +27,21 @@ const Login = () => {
         headers:{
           "Content-Type":"application/json"
         },
-        credentialsL:"include",//important so cookies work 
+        credentials:"include",//important so cookies work 
         body:JSON.stringify({email,password}),
       });
       const data= await res.json();
 
       if(!res.ok){
         setError(data.message|| "Login Failed");
+        
         return;
-      }
+      }else if(res.ok){
+         setUser(data.user)
+          navigate("/");
+       }
 
-      navigate("/dashboard");
+     
 
     }catch(err){
       setError("Something went wrong ")
