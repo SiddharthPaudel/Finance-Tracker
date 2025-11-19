@@ -10,3 +10,8 @@
 /* @theme{
   --font-family: 'Nunito', sans-serif;
 } */
+
+/* App.css or index.css */
+* {
+  font-family: 'Poppins', sans-serif;
+}

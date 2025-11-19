@@ -5,7 +5,7 @@ import OfferSection from '../components/OfferSection'
 
 const HomePage = () => {
   return (
-    <div>
+    <div >
         <Hero/>
         <OfferSection/>
       

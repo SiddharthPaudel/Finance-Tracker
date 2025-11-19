@@ -1,7 +1,11 @@
 import React from "react";
 import expense from "../images/expenses.png"
+import Lottie from "lottie-react";
 import saving from "../images/savings.png"
 import data from "../images/data-visualization.png"
+import save from "../animation/Saving-Money.json"
+import income from "../animation/income_tracker_final.json"
+import insight from "../animation/Dashboard.json"
 
 const OfferSection = () => {
   return (
@@ -15,10 +19,11 @@ const OfferSection = () => {
       <div className="bg-white-500 rounded-2xl  flex flex-col md:flex-row justify-around items-center p-10 space-y-8 md:space-y-0 md:space-x-10">
         {/* Feature 1 */}
         <div className="text-center max-w-sm">
-          <img
-            src={expense}
+          <Lottie
+            animationData={income}
+            loop={true}
             alt="Expense Tracking"
-            className="w-20 h-20 mx-auto mb-4"
+            className="w-30 h-30 mx-auto mb-4"
           />
           <h3 className="text-xl font-semibold text-gray-800 mb-2">
             Smart Expense Tracking
@@ -31,10 +36,10 @@ const OfferSection = () => {
 
         {/* Feature 2 */}
         <div className="text-center max-w-sm">
-          <img
-            src={saving}
-            alt="Budget Planning"
-            className="w-20 h-20 mx-auto mb-4"
+          <Lottie
+            animationData={save}
+            loop={true}
+            className="w-30 h-30 mx-auto mb-4"
           />
           <h3 className="text-xl font-semibold text-gray-800 mb-2">
             AI Savings Suggestions
@@ -47,10 +52,11 @@ const OfferSection = () => {
 
         {/* Feature 3 */}
         <div className="text-center max-w-sm">
-          <img
-            src={data}
+          <Lottie
+            animationData={insight}
+            loop={true}
             alt="Insights"
-            className="w-20 h-20 mx-auto mb-4"
+            className="w-30 h-30 mx-auto mb-4"
           />
           <h3 className="text-xl font-semibold text-gray-800 mb-2">
            Insights & Reports

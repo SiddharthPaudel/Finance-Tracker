@@ -4,6 +4,7 @@ import budget from "../images/budget331.png"
 import Lottie from "lottie-react";
 import finance from "../animation/Data-Dashboard.json"
 
+
 const Hero = () => {
   return (
     <section className="flex items-center justify-between py-16 px-6 bg-white font-[Poppins]">

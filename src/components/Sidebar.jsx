@@ -1,5 +1,5 @@
 import React from "react";
-import revenue from "../Icons/revenue.png"
+import revenue from "../Icons/revenue.png";
 
 const Sidebar = ({ activeTab, setActiveTab }) => {
   const tabs = [
@@ -9,25 +9,26 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
   ];
 
   return (
-    <aside className="w-64 bg-blue-600 text-white flex flex-col p-5">
-       <div className="flex items-center gap-2 p-4 text-2xl font-semibold text-blue-800 border-b border-blue-200">
-      <img
-        src={revenue}
-        alt="FinTrack Logo"
-        className="w-8 h-8 object-contain"
-      />
-      <span>FinTrack</span>
+    <aside className="w-60 bg-white border-r border-gray-200 h-screen p-5 flex flex-col">
+      {/* Logo */}
+      <div className="flex items-center gap-2 mb-8">
+        <img src={revenue} alt="FinTrack Logo" className="w-7 h-7" />
+        <span className="text-xl font-semibold text-gray-800">FinTrack</span>
+      </div>
 
-    </div>
-    <br/>
-      <nav className="space-y-4">
+      {/* Tabs */}
+      <nav className="space-y-1">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`w-full text-left py-2 px-3 rounded-lg transition ${
-              activeTab === tab.id ? "bg-blue-800" : "hover:bg-blue-700"
-            }`}
+            className={`w-full text-left py-2 px-3 rounded-md text-sm font-medium transition
+              ${
+                activeTab === tab.id
+                  ? "bg-blue-100 text-blue-700"
+                  : "text-gray-600 hover:bg-gray-100"
+              }
+            `}
           >
             {tab.label}
           </button>
