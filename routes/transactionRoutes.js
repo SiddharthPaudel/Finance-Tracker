@@ -3,8 +3,8 @@ import { addTransaction, deleteTransaction ,getTransactions } from "../controlle
 import { authMiddleware } from "../utils/middleware.js";
 
 const router = express.Router();
-router.post("/add",authMiddleware,addTransaction);
+router.post("/add",addTransaction);
 router.get("/:userId",getTransactions);
-router.delete("delete/:transactionId",deleteTransaction)
+router.delete("/delete/:id",deleteTransaction)
 
 export default router;

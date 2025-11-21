@@ -6,6 +6,7 @@ import userRoutes from "./routes/userRoutes.js"
 import transactionRoutes from "./routes/transactionRoutes.js"
 import categoryRoutes from "./routes/categoryRoutes.js"
 import dashboardRoutes from "./routes/dashboardRoutes.js"
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 connectDB();
@@ -13,8 +14,12 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: "http://localhost:5173",   // your frontend URL
+    credentials: true                 // IMPORTANT
+}));
 app.use(express.json());
+app.use(cookieParser());
 app.use("/api/users", userRoutes);
 app.use("/api/transactions",transactionRoutes)
 app.use("/api/categories", categoryRoutes);

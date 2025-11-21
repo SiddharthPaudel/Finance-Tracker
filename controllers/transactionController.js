@@ -12,7 +12,6 @@ export const addTransaction=async(req,res)=>{
     
     try {
         const transaction=new Transaction({
-
             userId,
             type,
             amount,
@@ -22,7 +21,12 @@ export const addTransaction=async(req,res)=>{
 
         })
         await transaction.save();
-        res.status(201).json({message:"Transaction added sucessfully",transaction})
+await transaction.populate("category", "name color icon budgetLimit");
+
+res.status(201).json({
+  message: "Transaction added successfully",
+  transaction
+});
     }
     catch(error){
         res.status(500).json({message:"Server error",error:error.message})
@@ -44,9 +48,9 @@ export const getTransactions=async(req,res)=>{
 }
 
 export const deleteTransaction=async(req,res)=>{
-    const{transactionId}=req.params;
+    const{id}=req.params;
     try{
-        await Transaction.findByIdAndDelete(transactionId);
+        await Transaction.findByIdAndDelete(id);
         res.status(200).json({message:"Transaction deleted sucessfully"})
     }
     catch(error){

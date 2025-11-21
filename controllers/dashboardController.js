@@ -16,11 +16,11 @@ export const getDashboardSummary = async (req, res) => {
     });
 
     // If no income recorded, avoid showing negative balance
-    let balance = totalIncome || totalpocketMoney - totalExpense;
+    let balance = totalIncome + totalpocketMoney - totalExpense;
     let message = "Dashboard summary fetched successfully";
 
     if (totalIncome === 0 || totalpocketMoney ===0 && totalExpense > 0) {
-      balance = 0;
+      
       message = "Add income to calculate your balance accurately";
     }
 
