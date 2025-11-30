@@ -1,16 +1,45 @@
-# React + Vite
+💰 Finance Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack finance tracking application built with the MERN stack (MongoDB, Express, React, Node.js). This app allows users to track income, expenses, and manage personal finances efficiently with a clean and responsive interface.
 
-Currently, two official plugins are available:
+🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ Income & Expense Tracking: Add, edit, and delete transactions
 
-## React Compiler
+✅ Categorization: Assign categories for better financial insights
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ Dashboard: View current balance, total income, and total expenses
 
-## Expanding the ESLint configuration
+✅ Monthly Summary: Understand spending patterns over time
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ Responsive Design: Works seamlessly on desktop and mobile
+
+✅ Secure Authentication: JWT-based login and registration
+
+🎬 Demo
+
+Home Page
+<img width="1588" height="1850" alt="localhost_5173_ (1)" src="https://github.com/user-attachments/assets/39f17b48-bc18-445e-b1c2-f24868cda74c" />
+
+
+
+Dashboard
+ <img width="1338" height="1975" alt="localhost_5173_dashboard (3)" src="https://github.com/user-attachments/assets/f915fc8d-4fc4-41fb-9876-6a7d27b1e599" />
+
+Transaction Page
+<img width="1897" height="907" alt="Screenshot 2025-11-30 134136" src="https://github.com/user-attachments/assets/9083eedc-7e7c-4bcb-8ee0-672884faa8b6" />
+
+Category Page
+<img width="1902" height="909" alt="Screenshot 2025-11-30 134145" src="https://github.com/user-attachments/assets/a04fb364-98a2-4a97-b7c8-19427600ef41" />
+
+🛠️ Tech Stack
+
+Frontend: React.js, Tailwind CSS
+
+Backend: Node.js, Express.js
+
+Database: MongoDB
+
+Authentication: JWT (JSON Web Token)
+
+Other Libraries: Axios, Mongoose
