@@ -24,7 +24,10 @@ Home Page
 
 
 Dashboard
- <img width="1338" height="1975" alt="localhost_5173_dashboard (3)" src="https://github.com/user-attachments/assets/f915fc8d-4fc4-41fb-9876-6a7d27b1e599" />
+<img width="1904" height="918" alt="Screenshot 2025-11-30 134115" src="https://github.com/user-attachments/assets/02f93a79-a1f6-4df4-b333-8b0baec25bf5" />
+<img width="1897" height="607" alt="Screenshot 2025-11-30 134127" src="https://github.com/user-attachments/assets/7a90b360-36f2-436a-bdcf-e822033d804f" />
+
+
 
 Transaction Page
 <img width="1897" height="907" alt="Screenshot 2025-11-30 134136" src="https://github.com/user-attachments/assets/9083eedc-7e7c-4bcb-8ee0-672884faa8b6" />
